@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s;
+}
+body.dark { background: #121212; }
+
+.chat-wrapper {
+  background: #fff;
+  border-radius: 30px;
+  width: 360px;
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: background 0.3s;
+}
+body.dark .chat-wrapper { background: #1e1e1e; }
+
+.chat-header {
+  background: #2196f3;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+.theme-toggle {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 8px;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.user .bubble { background-color: #2196f3; color: white; border-bottom-right-radius: 2px; }
+.bot .bubble { background-color: #e0e0e0; color: #333; border-bottom-left-radius: 2px; }
+body.dark .user .bubble { background-color: #1565c0; }
+body.dark .bot .bubble { background-color: #333; color: #eee; }
+.user { flex-direction: row-reverse; }
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-footer button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 0 14px;
+  margin-left: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  }
